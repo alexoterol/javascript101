@@ -16,6 +16,19 @@ const frameworks = [
   "Solid|5 de julio de 2021|250,000|80%"
 ];
 
+for (const framework of frameworks) {
+  const [frameworkName, releaseDate, usersName, popularityPercentage] = framework.split("|").map(item => item.trim());
+
+  const frameworkObj = {
+    frameworkName,
+    releaseDate,
+    usersName,
+    popularityPercentage
+  };
+
+  addRow(frameworkObj, "data-frameworks");
+}
+
 /**
  * 1. Itere el arreglo frameworks.
  * Referencia: https://javascript.info/array#loops
